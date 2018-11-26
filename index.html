@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Tabs with JQuery</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<h2>Пример работы JQuery</h2>
+	<div class="tabs">
+		<ul class="tab-links">
+			<li class="active"><a href="#tab1">Откуда он появился?</a></li>
+			<li><a href="#tab2">Что такое Lorem Ipsum?</a></li>
+			<li><a href="#tab3">Почему он используется?</a></li>
+			<li><a href="#tab4">Где его взять?</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div id="tab1" class="tab active">
+				<p>Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur", и занялся его поисками в классической латинской литературе. В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33 книги "de Finibus Bonorum et Malorum" ("О пределах добра и зла"), написанной Цицероном в 45 году н.э. Этот трактат по теории этики был очень популярен в эпоху Возрождения. Первая строка Lorem Ipsum, "Lorem ipsum dolor sit amet..", происходит от одной из строк в разделе 1.10.32</p>
+			</div>
+
+			<div id="tab2" class="tab">
+				<p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+			</div>
+
+			<div id="tab3" class="tab">
+				<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).</p>
+			</div>
+
+			<div id="tab4" class="tab">
+				<p>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или "невозможных" слов.</p>
+			</div>
+		</div>
+	</div>
+	<br><br><br>
+	<h2>Пример работы JQuery</h2>
+	<h3>Форма обратной связи</h3>
+	<form id="feedback" name="feedback" method="POST">
+		<ul class="form-list form-list_contact">
+			<li style="list-style-type: none;">
+				<label>Ваше имя:</label>
+				<div>
+					<input class="form-control" type="text" name="username" maxlength="30" value="">
+				</div>
+				<span class="error"></span>
+			</li>
+			<li style="list-style-type: none;">
+				<label>Электронная почта:</label>
+				<div>
+					<input class="form-control" type="text" name="usermail" maxlength="50" value="">
+				</div>
+				<span class="error"></span>
+			</li>
+			<li style="list-style-type: none;">
+				<label>Текст сообщения:</label>
+				<div>
+					<textarea class="form-control" name="textmess"></textarea>
+				</div>
+				<span class="error"></span>
+			</li>
+			<li style="list-style-type: none;">
+				<label></label>
+				<div>
+					<style>.containerss div {display: none;}</style>
+
+					<select id="selectItem">
+
+						<option id="kirov">Киров</option>
+						<option id="moskva">Москва</option>
+						<option id="piter">Санкт-Петербург</option>
+						<option id="cheboksary">Чебоксары</option>
+
+					</select>
+				</div>
+			</li>
+			<li style="list-style-type: none;">
+				<label></label>
+				<div>
+					<button id="send_mess" type="submit">отправить сообщение</button>
+				</div>
+			</li>
+		</ul>
+	</form>
+
+
+	<script type="text/javascript">
+		<!--
+		$(function() {
+
+			if (localStorage.getItem("myKey")) {
+				var stored_select = localStorage.getItem("myKey");
+				$('#' + stored_select).prop("selected", true);
+				$('.' + stored_select).show();
+			} else {
+				$('.chelyabinsk').show();
+			}
+		});
+
+		$("#selectItem").change(function() {
+			$('.containerss').find('div').hide();
+			var selected = $('#selectItem option:selected').attr('id');
+			localStorage.setItem("myKey", selected);
+			$('.' + selected).show();
+		});
+		-->
+
+	</script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src="main.js"></script>
+	<script src="main2.js"></script>
+</body>
+
+</html>
